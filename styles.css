@@ -388,7 +388,7 @@ section .title::after{
     content: "explore my work";
 }
 .projects .carousel .card{
-    background: #5d5b5b;
+    background: #9fbecc;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
