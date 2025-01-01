@@ -87,7 +87,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: rgb(173, 197, 207);
+    background: rgb(146, 206, 205);
 }
 .navbar .max-width{
     display: flex;
@@ -227,23 +227,23 @@ section .title::after{
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color: rgb(28, 157, 200);
+    color: rgb(7, 28, 35);
     font-weight: 500;
 }
 .home .home-content a{
     display: inline-block;
-    background: rgb(28, 157, 200);
+    background: rgb(10, 56, 71);
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
-    border: 2px solid rgb(28, 157, 200);
+    border: 2px solid rgb(3, 37, 48);
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-    color: rgb(28, 157, 200);
+    color: rgb(146, 206, 205);
     background: none;
 }
 
@@ -269,25 +269,25 @@ section .title::after{
     margin-bottom: 10px;
 }
 .about .about-content .right .text span{
-    color: crimson;
+    color: rgb(41, 75, 155);
 }
 .about .about-content .right p{
     text-align: justify;
 }
 .about .about-content .right a{
     display: inline-block;
-    background: crimson;
+    background: rgb(14, 175, 207);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid rgb(20, 110, 220);
     transition: all 0.3s ease;
 }
 .about .about-content .right a:hover{
-    color: crimson;
+    color: rgb(39, 163, 194);
     background: none;
 }
 
