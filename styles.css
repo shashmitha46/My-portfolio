@@ -16,7 +16,7 @@ html{
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #6d90c9;
+    background: #bee6eb;
 }
 ::-webkit-scrollbar-thumb {
     background: #888;
@@ -87,7 +87,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: rgb(146, 206, 205);
+    background: rgba(29, 128, 171, 0.841);
 }
 .navbar .max-width{
     display: flex;
@@ -179,7 +179,7 @@ section .title::after{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(99, 96, 96, 0.7); /* Dark overlay */
+    background: rgba(90, 120, 137, 0.686); /* Dark overlay */
     z-index: 0;
     filter: blur(5px); /* Slight blur for a faded look */
 }
@@ -239,11 +239,11 @@ section .title::after{
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
-    border: 2px solid rgb(3, 37, 48);
+    border: 2px solid rgb(42, 97, 116);
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-    color: rgb(146, 206, 205);
+    color: rgba(12, 253, 249, 0.555);
     background: none;
 }
 
@@ -376,33 +376,48 @@ section .title::after{
 .projects .title::after{
     content: "explore my work";
 }
-.projects .carousel .card{
+.projects .carousel .card {
     background: #9fbecc;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
+    width: 350px; /* Set a consistent width */
+    height:500px; /* Set a consistent height */
+    display: flex; /* Align content properly */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px; /* Add spacing between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better aesthetics */
 }
-.projects .carousel .card:hover{
+
+.projects .carousel .card:hover {
     background: rgb(104, 183, 225);
+    transform: translateY(-5px); /* Add slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
-.projects .carousel .card .box{
+
+.projects .carousel .card .box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.projects .carousel .card:hover .box{
+
+.projects .carousel .card:hover .box {
     transform: scale(1.05);
 }
-.projects .carousel .card .text{
+
+.projects .carousel .card .text {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.projects .carousel .card img{
+
+.projects .carousel .card img {
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -410,30 +425,53 @@ section .title::after{
     border: 5px solid rgb(104, 183, 225);
     transition: all 0.3s ease;
 }
-.projects .carousel .card:hover img{
+
+.projects .carousel .card:hover img {
     border-color: #fff;
 }
-.owl-dots{
+
+/* Owl Carousel Dots */
+.owl-dots {
     text-align: center;
     margin-top: 20px;
 }
-.owl-dot{
+
+.owl-dot {
     height: 13px;
     width: 13px;
     margin: 0 5px;
-    outline: none!important;
+    outline: none !important;
     border-radius: 50%;
-    border: 2px solid rgb(104, 183, 225)!important;
+    border: 2px solid rgb(104, 183, 225) !important;
     transition: all 0.3s ease;
 }
-.owl-dot.active{
+
+.owl-dot.active {
     width: 35px;
     border-radius: 14px;
 }
+
 .owl-dot.active,
-.owl-dot:hover{
-    background: rgb(104, 183, 225)!important;
+.owl-dot:hover {
+    background: rgb(104, 183, 225) !important;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects .carousel .card {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Let height adjust based on content */
+        padding: 20px;
+    }
+    .projects .carousel .card img {
+        height: 120px;
+        width: 120px;
+    }
+    .projects .carousel .card .text {
+        font-size: 22px;
+    }
+}
+
 
 /* contact section styling */
 .contact .title::after{
@@ -522,23 +560,23 @@ section .title::after{
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
+  background: rgb(81, 172, 193);
+  border: 2px solid rgb(81, 172, 193);
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover{
-  color: crimson;
+  color: rgb(81, 172, 193);
   background: none;
 }
 /* footer section styling */
 footer{
-    background: #111;
+    background: #c5d3e7;
     padding: 15px 23px;
-    color: #fff;
+    color: #141515;
     text-align: center;
 }
 footer span a{
-    color: crimson;
+    color: rgb(82, 147, 162);
     text-decoration: none;
 }
 footer span a:hover{
