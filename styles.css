@@ -87,7 +87,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: #3b7996d0;
+    background: #024473;
 }
 .navbar .max-width{
     display: flex;
@@ -428,7 +428,7 @@ body.dark-mode {
     content: "explore my work";
 }
 .projects .carousel .card {
-    background: #035378;
+    background: #055db5;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -621,7 +621,7 @@ body.dark-mode {
 }
 /* footer section styling */
 footer{
-    background: #45a3c8eb;
+    background: #056e97eb;
     padding: 15px 23px;
     color: #141515;
     text-align: center;
