@@ -95,7 +95,7 @@ section .title::after{
     justify-content: space-between;
 }
 .navbar .logo a{
-    color: #fff;
+    color: #070707;
     font-size: 35px;
     font-weight: 600;
 }
@@ -158,6 +158,53 @@ section .title::after{
 }
 .scroll-up-btn:hover{
     filter: brightness(90%);
+}
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dark-mode-toggle input {
+    display: none;
+}
+
+.dark-mode-toggle label {
+    cursor: pointer;
+    background: #9fbecc;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.dark-mode-toggle input:checked + label {
+    background: #555;
+    color: white;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.navbar.dark-mode {
+    background-color: #1f1f1f;
+}
+
+.footer.dark-mode {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+/* Additional overrides */
+.home.dark-mode .home-content a {
+    background: #333;
+    color: #e0e0e0;
 }
 
 
