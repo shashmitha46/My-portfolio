@@ -119,7 +119,7 @@ section .title::after{
     transition: color 0.5s ease;
 }
 .navbar .menu li a:hover{
-    color: rgb(138, 206, 228);
+    color: rgb(22, 93, 174);
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -159,10 +159,10 @@ section .title::after{
 .scroll-up-btn:hover{
     filter: brightness(90%);
 }
-.dark-mode-toggle label {
+.dark-mode-toggle button {
     cursor: pointer;
     position: relative;
-    left:20px;
+    left: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,23 +170,26 @@ section .title::after{
     height: 40px;
     border-radius: 50%;
     background: #9fbecc;
+    border: none;
+    outline: none;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.dark-mode-toggle label i {
+.dark-mode-toggle button i {
     font-size: 20px;
     color: #111;
     transition: color 0.3s ease;
 }
 
-.dark-mode-toggle input:checked + label {
+body.dark-mode .dark-mode-toggle button {
     background: #555;
     transform: rotate(180deg);
 }
 
-.dark-mode-toggle input:checked + label i {
+body.dark-mode .dark-mode-toggle button i {
     color: #fff;
 }
+
 
 body.dark-mode {
     background-color: #121212;

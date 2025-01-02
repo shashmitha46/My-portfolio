@@ -77,17 +77,18 @@ const body = document.body;
 // Load saved preference
 if (localStorage.getItem('darkMode') === 'enabled') {
     body.classList.add('dark-mode');
-    darkModeToggle.checked = true;
 }
 
-darkModeToggle.addEventListener('change', () => {
-    if (darkModeToggle.checked) {
-        body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'enabled');
-    } else {
+// Add event listener to the button
+darkModeToggle.addEventListener('click', () => {
+    if (body.classList.contains('dark-mode')) {
         body.classList.remove('dark-mode');
         localStorage.setItem('darkMode', 'disabled');
+    } else {
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
     }
 });
+
 
 
