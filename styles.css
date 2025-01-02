@@ -182,8 +182,8 @@ section .title::after{
 }
 
 body.dark-mode .dark-mode-toggle button {
-    background: #555;
-    transform: rotate(180deg);
+    background: #062f5e;
+    /*transform: rotate(180deg);*/
 }
 
 body.dark-mode .dark-mode-toggle button i {
@@ -428,7 +428,7 @@ body.dark-mode {
     content: "explore my work";
 }
 .projects .carousel .card {
-    background: #9fbecc;
+    background: #035378;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -621,13 +621,13 @@ body.dark-mode {
 }
 /* footer section styling */
 footer{
-    background: #c5d3e7;
+    background: #45a3c8eb;
     padding: 15px 23px;
     color: #141515;
     text-align: center;
 }
 footer span a{
-    color: rgb(82, 147, 162);
+    color: rgb(24, 88, 137);
     text-decoration: none;
 }
 footer span a:hover{
@@ -662,7 +662,7 @@ footer span a:hover{
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;
+        background: #82b3c0db;
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
