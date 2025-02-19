@@ -8,7 +8,7 @@ $(document).ready(function(){
         }
         
         // scroll-up button show/hide script
-        if(this.scrollY > 500){
+        if(this.scrollY > 900){
             $('.scroll-up-btn').addClass("show");
         }else{
             $('.scroll-up-btn').removeClass("show");
@@ -53,7 +53,7 @@ $(document).ready(function(){
         margin: 20,
         loop: true,
         autoplay: true,
-        autoplayTimeOut: 2000,
+        autoplayTimeOut: 1000,
         autoplayHoverPause: true,
         responsive: {
             0:{
@@ -71,3 +71,24 @@ $(document).ready(function(){
         }
     });
 });
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Load saved preference
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+}
+
+// Add event listener to the button
+darkModeToggle.addEventListener('click', () => {
+    if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+    } else {
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+    }
+});
+
+
+

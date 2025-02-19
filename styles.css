@@ -16,7 +16,7 @@ html{
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #0d55c8;
+    background: #bee6eb;
 }
 ::-webkit-scrollbar-thumb {
     background: #888;
@@ -70,7 +70,7 @@ section .title::after{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color: rgb(28, 157, 200);
+    color: rgb(114, 195, 222);
     padding: 0 5px;
     background: #060000;
     transform: translateX(-50%);
@@ -81,13 +81,13 @@ section .title::after{
     position: fixed;
     width: 100%;
     z-index: 999;
-    padding: 30px 0;
+    padding: 10px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: rgb(28, 157, 200);
+    background: #92cece;
 }
 .navbar .max-width{
     display: flex;
@@ -95,12 +95,12 @@ section .title::after{
     justify-content: space-between;
 }
 .navbar .logo a{
-    color: #fff;
+    color: #070707;
     font-size: 35px;
     font-weight: 600;
 }
 .navbar .logo a span{
-    color:rgb(28, 157, 200);
+    color: #89d3e8;
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
@@ -112,14 +112,14 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
-    font-size: 18px;
+    color: #111010;
+    font-size: 25px;
     font-weight: 500;
     margin-left: 25px;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 .navbar .menu li a:hover{
-    color: rgb(28, 157, 200);
+    color: rgb(22, 93, 174);
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -159,6 +159,57 @@ section .title::after{
 .scroll-up-btn:hover{
     filter: brightness(90%);
 }
+.dark-mode-toggle button {
+    cursor: pointer;
+    position: relative;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #9fbecc;
+    border: none;
+    outline: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode-toggle button i {
+    font-size: 20px;
+    color: #111;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .dark-mode-toggle button {
+    background: #062f5e;
+    /*transform: rotate(180deg);*/
+}
+
+body.dark-mode .dark-mode-toggle button i {
+    color: #fff;
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.navbar.dark-mode {
+    background-color: #1f1f1f;
+}
+
+.footer.dark-mode {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+/* Additional overrides */
+.home.dark-mode .home-content a {
+    background: #333;
+    color: #e0e0e0;
+}
 
 
 /* home section styling */
@@ -172,6 +223,36 @@ section .title::after{
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(90, 120, 137, 0.686); /* Dark overlay */
+    z-index: 0;
+    filter: blur(5px); /* Slight blur for a faded look */
+}
+.home::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.278);
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(30px, 30px);
+    }
+}
 .home .max-width{
   width: 100%;
   display: flex;
@@ -179,8 +260,13 @@ section .title::after{
 .home .max-width .row{
   margin-right: 0;
 }
+.home-content {
+    color: #fff; /* White text for visibility */
+    z-index: 1; /* Ensure text is above the background */
+}
 .home .home-content .text-1{
     font-size: 27px;
+    z-index: 1;
 }
 .home .home-content .text-2{
     font-size: 75px;
@@ -192,23 +278,23 @@ section .title::after{
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color: rgb(28, 157, 200);
+    color: rgb(7, 28, 35);
     font-weight: 500;
 }
 .home .home-content a{
     display: inline-block;
-    background: rgb(28, 157, 200);
+    background: rgb(10, 56, 71);
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
-    border: 2px solid rgb(28, 157, 200);
+    border: 2px solid rgb(42, 97, 116);
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-    color: rgb(28, 157, 200);
+    color: rgba(12, 253, 249, 0.555);
     background: none;
 }
 
@@ -234,72 +320,26 @@ section .title::after{
     margin-bottom: 10px;
 }
 .about .about-content .right .text span{
-    color: crimson;
+    color: rgb(41, 75, 155);
 }
 .about .about-content .right p{
     text-align: justify;
 }
 .about .about-content .right a{
     display: inline-block;
-    background: crimson;
+    background: rgb(72, 208, 235);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid rgb(20, 110, 220);
     transition: all 0.3s ease;
 }
 .about .about-content .right a:hover{
-    color: crimson;
+    color: rgb(39, 163, 194);
     background: none;
-}
-
-/* services section styling */
-.services, .teams{
-    color:#fff;
-    background: #111;
-}
-.services .title::before,
-.teams .title::before{
-    background: #fff;
-}
-.services .title::after,
-.teams .title::after{
-    background: #111;
-    content: "what i provide";
-}
-.services .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover{
-    background: crimson;
-}
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
-}
-.services .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-.services .serv-content .card:hover i{
-    color: #fff;
-}
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
 }
 
 /* skills section styling */
@@ -320,18 +360,18 @@ section .title::after{
 }
 .skills .skills-content .left a{
     display: inline-block;
-    background: crimson;
+    background: rgb(41, 167, 220);
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid rgb(5, 99, 150);
     transition: all 0.3s ease;
 }
 .skills .skills-content .left a:hover{
-    color: crimson;
+    color: rgb(35, 102, 203);
     background: none;
 }
 .skills .skills-content .right .bars{
@@ -359,24 +399,24 @@ section .title::after{
     height: 100%;
     left: 0;
     top: 0;
-    background: crimson;
+    background: rgb(37, 122, 161);
 }
 .skills-content .right .html::before{
     width: 90%;
 }
-.skills-content .right .css::before{
+.skills-content .right .mern::before{
     width: 60%;
 }
 .skills-content .right .js::before{
     width: 80%;
 }
-.skills-content .right .React::before{
+.skills-content .right .R::before{
     width: 50%;
 }
 .skills-content .right .mysql::before{
     width: 70%;
 }
-.skills-content .right .ML::before{
+.skills-content .right .BI::before{
     width: 60%;
 }
 .skills-content .right .python::before{
@@ -387,33 +427,48 @@ section .title::after{
 .projects .title::after{
     content: "explore my work";
 }
-.projects .carousel .card{
-    background: #9fbecc;
+.projects .carousel .card {
+    background: #055db5;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
+    width: 350px; /* Set a consistent width */
+    height:500px; /* Set a consistent height */
+    display: flex; /* Align content properly */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px; /* Add spacing between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better aesthetics */
 }
-.projects .carousel .card:hover{
+
+.projects .carousel .card:hover {
     background: rgb(104, 183, 225);
+    transform: translateY(-5px); /* Add slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
-.projects .carousel .card .box{
+
+.projects .carousel .card .box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.projects .carousel .card:hover .box{
+
+.projects .carousel .card:hover .box {
     transform: scale(1.05);
 }
-.projects .carousel .card .text{
+
+.projects .carousel .card .text {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.projects .carousel .card img{
+
+.projects .carousel .card img {
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -421,30 +476,53 @@ section .title::after{
     border: 5px solid rgb(104, 183, 225);
     transition: all 0.3s ease;
 }
-.projects .carousel .card:hover img{
+
+.projects .carousel .card:hover img {
     border-color: #fff;
 }
-.owl-dots{
+
+/* Owl Carousel Dots */
+.owl-dots {
     text-align: center;
     margin-top: 20px;
 }
-.owl-dot{
+
+.owl-dot {
     height: 13px;
     width: 13px;
     margin: 0 5px;
-    outline: none!important;
+    outline: none !important;
     border-radius: 50%;
-    border: 2px solid rgb(104, 183, 225)!important;
+    border: 2px solid rgb(104, 183, 225) !important;
     transition: all 0.3s ease;
 }
-.owl-dot.active{
+
+.owl-dot.active {
     width: 35px;
     border-radius: 14px;
 }
+
 .owl-dot.active,
-.owl-dot:hover{
-    background: rgb(104, 183, 225)!important;
+.owl-dot:hover {
+    background: rgb(104, 183, 225) !important;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects .carousel .card {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Let height adjust based on content */
+        padding: 20px;
+    }
+    .projects .carousel .card img {
+        height: 120px;
+        width: 120px;
+    }
+    .projects .carousel .card .text {
+        font-size: 22px;
+    }
+}
+
 
 /* contact section styling */
 .contact .title::after{
@@ -533,23 +611,23 @@ section .title::after{
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
+  background: rgb(81, 172, 193);
+  border: 2px solid rgb(81, 172, 193);
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover{
-  color: crimson;
+  color: rgb(81, 172, 193);
   background: none;
 }
 /* footer section styling */
 footer{
-    background: #111;
+    background: #056e97eb;
     padding: 15px 23px;
-    color: #fff;
+    color: #141515;
     text-align: center;
 }
 footer span a{
-    color: crimson;
+    color: rgb(24, 88, 137);
     text-decoration: none;
 }
 footer span a:hover{
@@ -584,7 +662,7 @@ footer span a:hover{
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;
+        background: #82b3c0db;
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
