@@ -86,8 +86,8 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .navbar.sticky{
-    padding: 15px 0;
-    background: #3ec8e3;
+    padding: 10px 0;
+    background: #08768c;
 }
 .navbar .max-width{
     display: flex;
@@ -169,7 +169,7 @@ section .title::after{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #9fbecc;
+    background: #08768c;
     border: none;
     outline: none;
     transition: background 0.3s ease, transform 0.3s ease;
@@ -182,7 +182,7 @@ section .title::after{
 }
 
 body.dark-mode .dark-mode-toggle button {
-    background: #062f5e;
+    background: #08768c;
     /*transform: rotate(180deg);*/
 }
 
@@ -210,7 +210,15 @@ body.dark-mode {
     background: #333;
     color: #e0e0e0;
 }
+.navbar.hide {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
 
+/* Show navbar (default) */
+.navbar {
+    transition: transform 0.3s ease;
+}
 
 /* home section styling */
 .home{
@@ -428,7 +436,7 @@ body.dark-mode {
     content: "explore my work";
 }
 .projects .carousel .card {
-    background: #055db5;
+    background: #5594d3ac;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -558,7 +566,7 @@ body.dark-mode {
     font-weight: 500;
 }
 .contact .contact-content .info .sub-title{
-    color: #a7b0b2;
+    color: #9b9d9d;
 }
 .contact .right form .fields{
     display: flex;
@@ -621,9 +629,9 @@ body.dark-mode {
 }
 /* footer section styling */
 footer{
-    background: #056e97eb;
+    background: #077faea9;
     padding: 15px 23px;
-    color: #141515;
+    color: #000000;
     text-align: center;
 }
 footer span a{
@@ -759,5 +767,25 @@ footer span a:hover{
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+}
+
+@media (max-width: 947px) {
+    .dark-mode-toggle {
+        position: relative;
+        top: 10px;
+        right: auto;
+        margin: 0 auto 10px auto;
+        display: flex;
+        justify-content: center;
+        z-index: 1001;
+    }
+}
+
+/* For extra small screens */
+@media (max-width: 500px) {
+    .dark-mode-toggle {
+        top: 5px;
+        margin-bottom: 8px;
     }
 }

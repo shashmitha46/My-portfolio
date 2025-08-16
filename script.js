@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    let lastScrollTop = 0; // Add this variable
+
     $(window).scroll(function(){
         // sticky navbar on scroll script
         if(this.scrollY > 20){
@@ -13,6 +15,17 @@ $(document).ready(function(){
         }else{
             $('.scroll-up-btn').removeClass("show");
         }
+
+        // Navbar hide/show on scroll direction
+        let st = $(this).scrollTop();
+        if (st > lastScrollTop && st > 20) {
+            // Scroll down
+            $('.navbar').addClass('hide');
+        } else {
+            // Scroll up
+            $('.navbar').removeClass('hide');
+        }
+        lastScrollTop = st;
     });
 
     // slide-up script
@@ -71,12 +84,16 @@ $(document).ready(function(){
         }
     });
 });
+
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
 
 // Load saved preference
-if (localStorage.getItem('darkMode') === 'enabled') {
+if (localStorage.getItem('darkMode') !== 'disabled') {
     body.classList.add('dark-mode');
+    localStorage.setItem('darkMode', 'enabled');
+} else {
+    body.classList.remove('dark-mode');
 }
 
 // Add event listener to the button
