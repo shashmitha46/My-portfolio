@@ -230,6 +230,7 @@ body.dark-mode {
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
+
 }
 .home::before {
     content: "";
