@@ -410,13 +410,13 @@ body.dark-mode {
     background: rgb(37, 122, 161);
 }
 .skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .mern::before{
     width: 60%;
 }
+.skills-content .right .react::before{
+    width: 50%;
+}
 .skills-content .right .js::before{
-    width: 80%;
+    width: 50%;
 }
 .skills-content .right .R::before{
     width: 50%;
