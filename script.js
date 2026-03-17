@@ -87,23 +87,27 @@ $(document).ready(function(){
 
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
+const icon = darkModeToggle.querySelector('i');
 
 // Load saved preference
-if (localStorage.getItem('darkMode') !== 'disabled') {
-    body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'enabled');
+if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light-mode');
+    icon.classList.replace('fa-moon', 'fa-sun');
 } else {
-    body.classList.remove('dark-mode');
+    body.classList.remove('light-mode');
+    icon.classList.replace('fa-sun', 'fa-moon');
 }
 
 // Add event listener to the button
 darkModeToggle.addEventListener('click', () => {
-    if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', 'disabled');
+    body.classList.toggle('light-mode');
+    
+    if (body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+        icon.classList.replace('fa-moon', 'fa-sun');
     } else {
-        body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'enabled');
+        localStorage.setItem('theme', 'dark');
+        icon.classList.replace('fa-sun', 'fa-moon');
     }
 });
 
