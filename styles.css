@@ -586,7 +586,7 @@ body.light-mode .home .home-content .text-2 {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #fff;
+    color: var(--text-main);
 }
 .contact .contact-content .left p{
     text-align: justify;
